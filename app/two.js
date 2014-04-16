@@ -1,3 +1,3 @@
 function two() {
-  console.log('two');
+  console.log('new log comment in two function');
 }

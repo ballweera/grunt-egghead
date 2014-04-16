@@ -1,5 +1,3 @@
 {
-  "person": {
-    "firstName": "Frank"
-  }
+  "input": "app/**/*.js"
 }
