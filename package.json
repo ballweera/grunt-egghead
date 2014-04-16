@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"dependencies": {
 		"grunt": "*",
-		"grunt-contrib-watch": "*"
+		"grunt-contrib-watch": "*",
+		"grunt-contrib-uglify": "*"
 	}
 }
