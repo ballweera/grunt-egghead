@@ -1,14 +1,14 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
-		watch: {
-			files: ["journal.txt"],
-			tasks: ["pat"]
-		}
+		files: [".js", ".html"],
+		compile: "Hello, <% _.forEach(files, function(file) {%>" +
+				"<%= file %>" +
+				"<%}) %>"
 	});
 
-	grunt.loadNpmTasks("grunt-contrib-watch");
-
-	grunt.registerTask("pat", function() {
-		grunt.log.writeln("Keep going, you're great!");
+	grunt.registerTask("default", function() {
+		grunt.log.writeln(grunt.config.get("compile"));
+		grunt.log.writeln(grunt.template.today());
+		grunt.log.writeln(grunt.template.process("<%= files %>"));
 	});
 }
