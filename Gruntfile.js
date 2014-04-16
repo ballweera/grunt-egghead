@@ -1,8 +1,14 @@
 module.exports = function(grunt) {
-	grunt.initConfig(grunt.file.readJSON("config.json"));
+	grunt.initConfig({
+		watch: {
+			files: ["journal.txt"],
+			tasks: ["pat"]
+		}
+	});
 
-	grunt.registerTask("default", function(name) {
-		grunt.log.writeln("Hello, " +
-					grunt.config.get("person").firstName);
+	grunt.loadNpmTasks("grunt-contrib-watch");
+
+	grunt.registerTask("pat", function() {
+		grunt.log.writeln("Keep going, you're great!");
 	});
 }
